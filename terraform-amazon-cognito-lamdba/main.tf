@@ -119,7 +119,7 @@ resource "aws_iam_role_policy_attachment" "basic_policy_cognito_triggers" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-# REST API Lambda関数用ソースコードファイル
+# Lambda binary file
 data "archive_file" "cognito_triggers" {
   type        = "zip"
   source_file = "${path.module}/cognito_triggers/main"
